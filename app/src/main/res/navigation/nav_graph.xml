@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- 1. Splash / Onboarding -->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.group29.eventapp.presentation.auth.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splash_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- 2. Login -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.group29.eventapp.presentation.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_org_dashboard"
+            app:destination="@id/organizerDashboardFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- 3. Register -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.group29.eventapp.presentation.auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" />
+
+    <!-- 4. Home (Attendee BottomNav) -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.group29.eventapp.presentation.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <!-- 5. Search / Filter (Attendee BottomNav) -->
+    <fragment
+        android:id="@+id/searchFilterFragment"
+        android:name="com.group29.eventapp.presentation.events.SearchFilterFragment"
+        android:label="SearchFilter"
+        tools:layout="@layout/fragment_search_filter" />
+
+    <!-- 6. Event Detail -->
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.group29.eventapp.presentation.events.EventDetailFragment"
+        android:label="EventDetail"
+        tools:layout="@layout/fragment_event_detail" />
+
+    <!-- 7. My Events (Attendee BottomNav) -->
+    <fragment
+        android:id="@+id/myEventsFragment"
+        android:name="com.group29.eventapp.presentation.events.MyEventsFragment"
+        android:label="MyEvents"
+        tools:layout="@layout/fragment_my_events" />
+
+    <!-- 8. QR Ticket -->
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.group29.eventapp.presentation.ticket.TicketFragment"
+        android:label="Ticket"
+        tools:layout="@layout/fragment_ticket" />
+
+    <!-- 9. Organizer QR Scanner (Org BottomNav) -->
+    <fragment
+        android:id="@+id/organizerScannerFragment"
+        android:name="com.group29.eventapp.presentation.organizer.OrganizerScannerFragment"
+        android:label="OrganizerScanner"
+        tools:layout="@layout/fragment_organizer_scanner" />
+
+    <!-- 10. Organizer Dashboard (Org BottomNav) -->
+    <fragment
+        android:id="@+id/organizerDashboardFragment"
+        android:name="com.group29.eventapp.presentation.organizer.OrganizerDashboardFragment"
+        android:label="OrganizerDashboard"
+        tools:layout="@layout/fragment_organizer_dashboard" />
+
+    <!-- 11. Organizer Event Editor -->
+    <fragment
+        android:id="@+id/organizerEventEditorFragment"
+        android:name="com.group29.eventapp.presentation.organizer.OrganizerEventEditorFragment"
+        android:label="OrganizerEventEditor"
+        tools:layout="@layout/fragment_organizer_event_editor" />
+
+    <!-- 12. Organizer Attendees List -->
+    <fragment
+        android:id="@+id/organizerAttendeesFragment"
+        android:name="com.group29.eventapp.presentation.organizer.OrganizerAttendeesFragment"
+        android:label="OrganizerAttendees"
+        tools:layout="@layout/fragment_organizer_attendees" />
+
+    <!-- 13. Organizer Quest Editor (Org BottomNav) -->
+    <fragment
+        android:id="@+id/organizerQuestEditorFragment"
+        android:name="com.group29.eventapp.presentation.organizer.OrganizerQuestEditorFragment"
+        android:label="OrganizerQuestEditor"
+        tools:layout="@layout/fragment_organizer_quest_editor" />
+
+    <!-- 14. Event Quests -->
+    <fragment
+        android:id="@+id/questListFragment"
+        android:name="com.group29.eventapp.presentation.quest.QuestListFragment"
+        android:label="QuestList"
+        tools:layout="@layout/fragment_quest_list" />
+
+    <!-- 15. Smart Event Match (Attendee BottomNav) -->
+    <fragment
+        android:id="@+id/smartMatchFragment"
+        android:name="com.group29.eventapp.presentation.networking.SmartMatchFragment"
+        android:label="SmartMatch"
+        tools:layout="@layout/fragment_smart_match" />
+
+    <!-- 16. AI Assistant -->
+    <fragment
+        android:id="@+id/aiAssistantFragment"
+        android:name="com.group29.eventapp.presentation.assistant.AiAssistantFragment"
+        android:label="AiAssistant"
+        tools:layout="@layout/fragment_ai_assistant" />
+
+    <!-- 17. Live Map -->
+    <fragment
+        android:id="@+id/liveMapFragment"
+        android:name="com.group29.eventapp.presentation.map.LiveMapFragment"
+        android:label="LiveMap"
+        tools:layout="@layout/fragment_live_map" />
+
+    <!-- 18. Event Memory -->
+    <fragment
+        android:id="@+id/eventMemoryFragment"
+        android:name="com.group29.eventapp.presentation.memory.EventMemoryFragment"
+        android:label="EventMemory"
+        tools:layout="@layout/fragment_event_memory" />
+
+    <!-- 19. Profile & Settings (Attendee / Org BottomNav) -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.group29.eventapp.presentation.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- 20. Notifications -->
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.group29.eventapp.presentation.notification.NotificationFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notifications" />
+
+    <!-- 21. Journey Setup -->
+    <fragment
+        android:id="@+id/journeySetupFragment"
+        android:name="com.group29.eventapp.presentation.journey.JourneySetupFragment"
+        android:label="JourneySetup"
+        tools:layout="@layout/fragment_journey_setup" />
+
+    <!-- 22. Journey Overview -->
+    <fragment
+        android:id="@+id/journeyOverviewFragment"
+        android:name="com.group29.eventapp.presentation.journey.JourneyOverviewFragment"
+        android:label="JourneyOverview"
+        tools:layout="@layout/fragment_journey_overview" />
+
+    <!-- 23. Journey Step Detail -->
+    <fragment
+        android:id="@+id/journeyStepDetailFragment"
+        android:name="com.group29.eventapp.presentation.journey.JourneyStepDetailFragment"
+        android:label="JourneyStepDetail"
+        tools:layout="@layout/fragment_journey_step_detail" />
+
+    <!-- 24. Secret Mission Inbox -->
+    <fragment
+        android:id="@+id/secretMissionInboxFragment"
+        android:name="com.group29.eventapp.presentation.secretmission.SecretMissionInboxFragment"
+        android:label="SecretMissionInbox"
+        tools:layout="@layout/fragment_secret_mission_inbox" />
+
+    <!-- 25. Secret Mission Detail -->
+    <fragment
+        android:id="@+id/secretMissionDetailFragment"
+        android:name="com.group29.eventapp.presentation.secretmission.SecretMissionDetailFragment"
+        android:label="SecretMissionDetail"
+        tools:layout="@layout/fragment_secret_mission_detail" />
+
+    <!-- 26. Organizer Mission Review -->
+    <fragment
+        android:id="@+id/organizerMissionReviewFragment"
+        android:name="com.group29.eventapp.presentation.secretmission.OrganizerMissionReviewFragment"
+        android:label="OrganizerMissionReview"
+        tools:layout="@layout/fragment_organizer_mission_review" />
+
+    <!-- 27. Capsule Create -->
+    <fragment
+        android:id="@+id/capsuleCreateFragment"
+        android:name="com.group29.eventapp.presentation.timecapsule.CapsuleCreateFragment"
+        android:label="CapsuleCreate"
+        tools:layout="@layout/fragment_capsule_create" />
+
+    <!-- 28. Capsule Vault -->
+    <fragment
+        android:id="@+id/capsuleVaultFragment"
+        android:name="com.group29.eventapp.presentation.timecapsule.CapsuleVaultFragment"
+        android:label="CapsuleVault"
+        tools:layout="@layout/fragment_capsule_vault" />
+
+    <!-- 29. Capsule Detail -->
+    <fragment
+        android:id="@+id/capsuleDetailFragment"
+        android:name="com.group29.eventapp.presentation.timecapsule.CapsuleDetailFragment"
+        android:label="CapsuleDetail"
+        tools:layout="@layout/fragment_capsule_detail" />
+
+    <!-- 30. Waitlist Join & Status -->
+    <fragment
+        android:id="@+id/waitlistJoinFragment"
+        android:name="com.group29.eventapp.presentation.waitlist.WaitlistJoinFragment"
+        android:label="WaitlistJoin"
+        tools:layout="@layout/fragment_waitlist_join" />
+
+    <!-- 31. Seat Offer -->
+    <fragment
+        android:id="@+id/seatOfferFragment"
+        android:name="com.group29.eventapp.presentation.waitlist.SeatOfferFragment"
+        android:label="SeatOffer"
+        tools:layout="@layout/fragment_seat_offer" />
+
+    <!-- 32. Organizer Waitlist Management -->
+    <fragment
+        android:id="@+id/organizerWaitlistFragment"
+        android:name="com.group29.eventapp.presentation.waitlist.OrganizerWaitlistFragment"
+        android:label="OrganizerWaitlist"
+        tools:layout="@layout/fragment_organizer_waitlist" />
+
+</navigation>

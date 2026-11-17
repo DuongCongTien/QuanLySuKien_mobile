@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_large">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@color/color_outline" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đề xuất điều chỉnh bước hành trình"
+        android:textAppearance="?attr/textAppearanceTitleLarge"
+        android:textColor="@color/color_on_surface"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Do Ban tổ chức điều chỉnh lịch trình phiên thảo luận, hệ thống AI đã tối ưu hóa lại hành trình để bạn không bỏ lỡ các nội dung quan trọng:"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="@color/color_on_surface_variant" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="@dimen/corner_radius_medium"
+        app:cardElevation="1dp"
+        app:strokeColor="@color/color_outline"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phương án thay thế đề xuất: Phiên Edge AI (10:30)"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="@color/color_primary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Chuyển sang theo dõi phiên Demo Lab trực tiếp tại Tầng 2, tránh bị trùng giờ với phiên Báo cáo chính."
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="@color/color_on_surface_variant" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDismissAlternative"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:text="@string/btn_close" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAcceptAlternative"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:text="@string/btn_apply" />
+    </LinearLayout>
+
+</LinearLayout>

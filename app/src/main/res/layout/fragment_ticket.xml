@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/surface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/title_ticket"
+        app:titleTextAppearance="@style/TextAppearance.EventApp.Title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/layoutBottomActions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <!-- Electronic Ticket Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.EventApp.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Top Card Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_gradient_header"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_16">
+
+                        <TextView
+                            android:id="@+id/tvTicketEventCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chip_status_neutral"
+                            android:text="Vé chính thức"
+                            android:textAppearance="@style/TextAppearance.EventApp.Caption"
+                            android:textColor="@color/on_surface" />
+
+                        <TextView
+                            android:id="@+id/tvTicketEventTitle"
+                            style="@style/TextAppearance.EventApp.HeadlineSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_8"
+                            android:text="Tech Summit Danang 2026"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tvTicketTime"
+                            style="@style/TextAppearance.EventApp.Caption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_8"
+                            android:drawableStart="@drawable/ic_clock"
+                            android:drawablePadding="@dimen/spacing_6"
+                            android:drawableTint="@color/white"
+                            android:text="20/11/2026 08:30 - 17:00"
+                            android:textColor="#E0E3EC" />
+
+                        <TextView
+                            android:id="@+id/tvTicketLocation"
+                            style="@style/TextAppearance.EventApp.Caption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_4"
+                            android:drawableStart="@drawable/ic_location"
+                            android:drawablePadding="@dimen/spacing_6"
+                            android:drawableTint="@color/white"
+                            android:text="Ariyana Convention Center, Đà Nẵng"
+                            android:textColor="#E0E3EC" />
+
+                    </LinearLayout>
+
+                    <!-- Attendee Info Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/surface_variant"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_12">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextAppearance.EventApp.Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NGƯỜI THAM DỰ"
+                                android:textColor="@color/on_surface_hint" />
+
+                            <TextView
+                                android:id="@+id/tvTicketAttendeeName"
+                                style="@style/TextAppearance.EventApp.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_2"
+                                android:text="Nguyễn Văn A" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextAppearance.EventApp.Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TRẠNG THÁI"
+                                android:textColor="@color/on_surface_hint" />
+
+                            <TextView
+                                android:id="@+id/tvTicketCheckInStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_2"
+                                android:background="@drawable/bg_chip_status_info"
+                                android:text="Chưa check-in"
+                                android:textAppearance="@style/TextAppearance.EventApp.Caption"
+                                android:textColor="@color/status_info"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Dashed Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/divider" />
+
+                    <!-- QR Code Body -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_24">
+
+                        <ImageView
+                            android:id="@+id/ivQrCode"
+                            android:layout_width="@dimen/qr_code_size"
+                            android:layout_height="@dimen/qr_code_size"
+                            android:contentDescription="Mã QR vé điện tử"
+                            android:src="@drawable/ic_qr_placeholder" />
+
+                        <TextView
+                            android:id="@+id/tvTicketCodeNumber"
+                            style="@style/TextAppearance.EventApp.HeadlineSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_12"
+                            android:fontFamily="monospace"
+                            android:letterSpacing="0.1"
+                            android:text="SEH-2026-AI888"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/TextAppearance.EventApp.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_4"
+                            android:text="Đưa mã QR cho Ban tổ chức quét tại cổng check-in"
+                            android:textColor="@color/on_surface_hint" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Important Security Notice Box -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.EventApp.CardView.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                app:strokeColor="@color/status_warning_stroke">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/status_warning_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_12">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="Cảnh báo"
+                        android:src="@drawable/ic_warning" />
+
+                    <TextView
+                        style="@style/TextAppearance.EventApp.Caption"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_8"
+                        android:layout_weight="1"
+                        android:text="@string/ticket_share_warning"
+                        android:textColor="@color/status_warning"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Actions -->
+    <LinearLayout
+        android:id="@+id/layoutBottomActions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        android:elevation="@dimen/elevation_high"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackToEvent"
+            style="@style/Widget.EventApp.Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_8"
+            android:layout_weight="1"
+            android:text="Chi tiết sự kiện" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackToHome"
+            style="@style/Widget.EventApp.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_8"
+            android:layout_weight="1"
+            android:text="Về Trang chủ" />
+
+    </LinearLayout>
+
+    <!-- Loading & Error Overlays -->
+    <include
+        android:id="@+id/includeLoading"
+        layout="@layout/layout_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <include
+        android:id="@+id/includeError"
+        layout="@layout/layout_error"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Circle background -->
+    <path
+        android:fillColor="#E8EAF6"
+        android:pathData="M60,10 A50,50 0 1,1 59.9,10 Z" />
+    <!-- Calendar & Star (Before Event) -->
+    <path
+        android:fillColor="#3F51B5"
+        android:pathData="M35,35 h50 v50 h-50 z M42,48 h36 v30 h-36 z" />
+    <path
+        android:fillColor="#FF8F00"
+        android:pathData="M60,52 l4,8 9,1 -7,6 2,9 -8,-4 -8,4 2,-9 -7,-6 9,-1 z" />
+</vector>

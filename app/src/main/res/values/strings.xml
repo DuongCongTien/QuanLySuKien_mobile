@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tên ứng dụng -->
+    <string name="app_name">Smart Event Hub</string>
+    <string name="app_subtitle">Hệ thống quản lý và trải nghiệm sự kiện thông minh</string>
+
+    <!-- Điều hướng chính - Người tham gia -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_explore">Khám phá</string>
+    <string name="nav_my_events">Sự kiện của tôi</string>
+    <string name="nav_networking">Kết nối</string>
+    <string name="nav_profile">Cá nhân</string>
+
+    <!-- Điều hướng chính - Ban tổ chức -->
+    <string name="nav_org_overview">Tổng quan</string>
+    <string name="nav_org_events">Sự kiện</string>
+    <string name="nav_org_scan">Quét QR</string>
+    <string name="nav_org_quests">Nhiệm vụ</string>
+    <string name="nav_org_profile">Cá nhân</string>
+
+    <!-- Nút và hành động chung -->
+    <string name="btn_continue">Tiếp tục</string>
+    <string name="btn_start">Bắt đầu</string>
+    <string name="btn_skip">Bỏ qua</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="btn_register">Đăng ký</string>
+    <string name="btn_demo_attendee">Đăng nhập demo – Người tham gia</string>
+    <string name="btn_demo_organizer">Đăng nhập demo – Ban tổ chức</string>
+    <string name="btn_logout">Đăng xuất</string>
+    <string name="btn_save">Lưu</string>
+    <string name="btn_save_draft">Lưu nháp</string>
+    <string name="btn_publish">Công bố</string>
+    <string name="btn_confirm">Xác nhận</string>
+    <string name="btn_cancel">Hủy</string>
+    <string name="btn_close">Đóng</string>
+    <string name="btn_retry">Thử lại</string>
+    <string name="btn_apply">Áp dụng</string>
+    <string name="btn_reset">Đặt lại</string>
+    <string name="btn_search">Tìm kiếm</string>
+    <string name="btn_filter">Bộ lọc</string>
+    <string name="btn_send">Gửi</string>
+    <string name="btn_accept">Chấp nhận</string>
+    <string name="btn_decline">Từ chối</string>
+    <string name="btn_view_details">Xem chi tiết</string>
+    <string name="btn_share">Chia sẻ</string>
+    <string name="btn_copy">Sao chép</string>
+    <string name="btn_complete">Hoàn thành</string>
+    <string name="btn_mark_completed">Đánh dấu hoàn thành</string>
+    <string name="btn_skip_step">Bỏ qua bước này</string>
+    <string name="btn_simulate_checkin">Check-in giả lập</string>
+    <string name="btn_leave_waitlist">Rời hàng đợi</string>
+    <string name="btn_join_waitlist">Tham gia danh sách chờ</string>
+    <string name="btn_seal_capsule">Niêm phong Capsule</string>
+    <string name="btn_unlock_hint">Mở gợi ý</string>
+    <string name="btn_submit_evidence">Gửi bằng chứng</string>
+    <string name="btn_claim_reward">Nhận thưởng</string>
+
+    <!-- Trạng thái chung -->
+    <string name="state_loading">Đang tải dữ liệu...</string>
+    <string name="state_empty">Không có dữ liệu hiển thị</string>
+    <string name="state_error">Đã có lỗi xảy ra</string>
+    <string name="state_success">Thao tác thành công!</string>
+
+    <!-- Bảng mã lỗi chuẩn (AppError) -->
+    <string name="error_not_authenticated">Bạn chưa đăng nhập hoặc phiên làm việc đã hết hạn. Vui lòng đăng nhập lại.</string>
+    <string name="error_permission_denied">Bạn không có quyền truy cập khu vực này. Tính năng dành riêng cho Ban tổ chức.</string>
+    <string name="error_event_closed">Sự kiện đã đóng đăng ký hoặc đã kết thúc. Không thể thực hiện thao tác này.</string>
+    <string name="error_capacity_full">Sự kiện đã hết chỗ đăng ký chính thức. Bạn có thể tham gia danh sách chờ.</string>
+    <string name="error_offer_expired">Rất tiếc! Lời mời nhận chỗ đã hết hiệu lực. Chỗ ngồi đã được chuyển cho người tiếp theo.</string>
+    <string name="error_already_registered">Bạn đã đăng ký tham gia sự kiện này rồi.</string>
+    <string name="error_already_completed">Nhiệm vụ này đã được hoàn thành trước đó. Bạn không thể nhận thưởng 2 lần.</string>
+    <string name="error_capsule_locked">Hộp thời gian đang trong trạng thái niêm phong và chưa tới thời điểm mở khóa.</string>
+    <string name="error_invalid_evidence">Bằng chứng gửi lên không hợp lệ hoặc chưa đáp ứng yêu cầu nhiệm vụ.</string>
+    <string name="error_network_simulated">Lỗi kết nối giả lập: Không thể kết nối tới máy chủ. Vui lòng kiểm tra cài đặt mạng.</string>
+
+    <!-- Xác thực (Màn 1, 2, 3) -->
+    <string name="onboarding_title_1">Trước sự kiện</string>
+    <string name="onboarding_desc_1">Khám phá sự kiện hấp dẫn, đăng ký nhanh chóng, thiết lập lịch trình cá nhân hóa và quản lý danh sách chờ thông minh.</string>
+    <string name="onboarding_title_2">Trong sự kiện</string>
+    <string name="onboarding_desc_2">Check-in một chạm bằng vé QR, tìm đường thông minh trên sơ đồ trực tiếp, chinh phục Secret Mission và kết nối người cùng sở thích.</string>
+    <string name="onboarding_title_3">Sau sự kiện</string>
+    <string name="onboarding_desc_3">Lưu giữ kỷ niệm với Event Memory, gửi thông điệp vào tương lai qua Time Capsule và nhận chứng nhận số.</string>
+    <string name="login_title">Chào mừng trở lại</string>
+    <string name="login_subtitle">Đăng nhập để trải nghiệm sự kiện tiện lợi nhất</string>
+    <string name="login_email_hint">Email của bạn</string>
+    <string name="login_password_hint">Mật khẩu</string>
+    <string name="login_forgot_password">Quên mật khẩu?</string>
+    <string name="login_dont_have_account">Chưa có tài khoản? Đăng ký ngay</string>
+    <string name="register_title">Tạo tài khoản mới</string>
+    <string name="register_subtitle">Tham gia cộng đồng sự kiện thông minh</string>
+    <string name="register_fullname_hint">Họ và tên</string>
+    <string name="register_confirm_password_hint">Xác nhận mật khẩu</string>
+    <string name="register_already_have_account">Đã có tài khoản? Đăng nhập</string>
+    <string name="forgot_password_title">Đặt lại mật khẩu</string>
+    <string name="forgot_password_desc">Nhập địa chỉ email của bạn, chúng tôi sẽ gửi liên kết đặt lại mật khẩu.</string>
+    <string name="forgot_password_success">Đã gửi email khôi phục mật khẩu giả lập! Vui lòng kiểm tra hòm thư.</string>
+
+    <!-- Validate lỗi nhập liệu -->
+    <string name="val_email_invalid">Email không đúng định dạng</string>
+    <string name="val_password_short">Mật khẩu phải có ít nhất 6 ký tự</string>
+    <string name="val_password_not_match">Mật khẩu xác nhận không khớp</string>
+    <string name="val_field_required">Trường này không được để trống</string>
+
+    <!-- Tiêu đề 32 màn hình -->
+    <string name="title_splash">Khởi động</string>
+    <string name="title_login">Đăng nhập</string>
+    <string name="title_register">Đăng ký tài khoản</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_search">Khám phá sự kiện</string>
+    <string name="title_event_detail">Chi tiết sự kiện</string>
+    <string name="title_my_events">Sự kiện của tôi</string>
+    <string name="title_ticket">Vé điện tử QR</string>
+    <string name="title_org_scanner">Quét mã vé check-in</string>
+    <string name="title_org_dashboard">Bảng điều khiển BTC</string>
+    <string name="title_org_event_edit">Quản lý sự kiện</string>
+    <string name="title_org_attendees">Danh sách người tham dự</string>
+    <string name="title_org_quests">Quản lý nhiệm vụ BTC</string>
+    <string name="title_quests">Nhiệm vụ sự kiện (Quest)</string>
+    <string name="title_smart_match">Smart Event Match</string>
+    <string name="title_assistant">Trợ lý sự kiện AI</string>
+    <string name="title_live_map">Sơ đồ mặt bằng sự kiện</string>
+    <string name="title_memory">Kỷ niệm sự kiện (Memory)</string>
+    <string name="title_profile">Hồ sơ cá nhân &amp; Cài đặt</string>
+    <string name="title_notifications">Thông báo</string>
+    <string name="title_journey_setup">Thiết lập hành trình</string>
+    <string name="title_journey_overview">Hành trình của tôi (Journey)</string>
+    <string name="title_journey_step_detail">Chi tiết bước hành trình</string>
+    <string name="title_mission_inbox">Hộp thư nhiệm vụ bí mật</string>
+    <string name="title_mission_detail">Chi tiết nhiệm vụ bí mật</string>
+    <string name="title_org_mission_review">Duyệt bằng chứng nhiệm vụ</string>
+    <string name="title_capsule_create">Tạo hộp thời gian (Time Capsule)</string>
+    <string name="title_capsule_vault">Kho lưu trữ Time Capsule</string>
+    <string name="title_capsule_detail">Chi tiết hộp thời gian</string>
+    <string name="title_waitlist_status">Trạng thái danh sách chờ</string>
+    <string name="title_seat_offer">Lời mời nhận chỗ ngồi</string>
+    <string name="title_org_waitlist">Quản lý danh sách chờ BTC</string>
+
+    <!-- Nhãn trạng thái sự kiện -->
+    <string name="status_event_draft">Bản nháp</string>
+    <string name="status_event_published">Sắp diễn ra</string>
+    <string name="status_event_registration_closed">Đã đóng đăng ký</string>
+    <string name="status_event_ongoing">Đang diễn ra</string>
+    <string name="status_event_completed">Đã kết thúc</string>
+    <string name="status_event_cancelled">Đã hủy</string>
+
+    <!-- Nhãn vé & Check-in -->
+    <string name="status_ticket_registered">Đã đăng ký</string>
+    <string name="status_ticket_cancelled">Đã hủy</string>
+    <string name="status_ticket_waitlisted">Danh sách chờ</string>
+    <string name="status_checkin_not">Chưa check-in</string>
+    <string name="status_checkin_done">Đã check-in</string>
+    <string name="ticket_share_warning">Vui lòng không chia sẻ mã QR này với người khác để bảo vệ quyền lợi tham dự.</string>
+
+    <!-- Cài đặt & Mock -->
+    <string name="setting_simulate_network_error">Giả lập lỗi kết nối mạng</string>
+    <string name="setting_simulate_network_error_desc">Bật để mô phỏng trạng thái lỗi kết nối mạng trên tất cả danh sách</string>
+    <string name="setting_privacy_profile">Cho phép người khác tìm thấy bạn trên Smart Match</string>
+    <string name="setting_role_current">Vai trò hiện tại:</string>
+    <string name="role_attendee">Người tham gia</string>
+    <string name="role_organizer">Ban tổ chức</string>
+
+    <!-- Journey V2.0 -->
+    <string name="journey_conflict_warning">Cảnh báo: Lịch trình có 2 hoạt động bắt buộc bị trùng giờ!</string>
+    <string name="journey_needs_update_banner">Ban tổ chức đã điều chỉnh lịch phiên. Hành trình cần được cập nhật.</string>
+    <string name="journey_update_action">Xem đề xuất thay thế</string>
+    <string name="journey_simulate_change">Giả lập: BTC đổi giờ phiên</string>
+    <string name="journey_match_score">Độ phù hợp: %1$d%%</string>
+
+    <!-- Time Capsule V2.0 -->
+    <string name="capsule_seal_warning">Khi đã niêm phong, bạn sẽ không thể chỉnh sửa hoặc xóa nội dung cho tới khi mở khóa.</string>
+    <string name="capsule_locked_notice">Hộp thời gian đang được niêm phong an toàn. Thời gian còn lại để mở khóa:</string>
+
+    <!-- Waitlist V2.0 -->
+    <string name="waitlist_fifo_notice">Hệ thống áp dụng cơ chế hàng đợi First-In First-Out (vào trước nhận trước). Khi có người hủy vé, lời mời nhận chỗ sẽ tự động gửi tới người đầu tiên.</string>
+    <string name="waitlist_fifo_agree">Tôi đã đọc và đồng ý với quy định danh sách chờ.</string>
+    <string name="waitlist_position_label">Vị trí trong hàng đợi: #%1$d</string>
+    <string name="offer_time_remaining">Thời gian còn lại để xác nhận:</string>
+
+    <!-- Organizer Attendees (Màn 12) -->
+    <string name="hint_search_attendees">Tìm theo tên, email hoặc mã vé...</string>
+    <string name="filter_all">Tất cả</string>
+    <string name="filter_checked_in">Đã check-in</string>
+    <string name="filter_not_checked_in">Chưa check-in</string>
+    <string name="filter_cancelled">Đã hủy</string>
+    <string name="btn_manual_checkin">Check-in thủ công</string>
+    <string name="msg_checkin_success">Check-in thành công cho %1$s!</string>
+    <string name="attendee_total_count">Tổng cộng: %1$d người tham gia</string>
+
+    <!-- Organizer Quests (Màn 13) -->
+    <string name="title_create_quest">Tạo nhiệm vụ mới</string>
+    <string name="hint_quest_title">Tiêu đề nhiệm vụ</string>
+    <string name="hint_quest_desc">Mô tả yêu cầu nhiệm vụ</string>
+    <string name="hint_quest_points">Điểm thưởng (EXP)</string>
+    <string name="hint_quest_max_attempts">Số lần tối đa</string>
+    <string name="hint_quest_verification">Cách xác minh</string>
+    <string name="btn_review_missions">Duyệt bằng chứng nhiệm vụ bí mật</string>
+    <string name="msg_quest_created">Tạo nhiệm vụ thành công!</string>
+
+    <!-- Quest List (Màn 14) -->
+    <string name="tab_quest_all">Tất cả</string>
+    <string name="tab_quest_in_progress">Đang làm</string>
+    <string name="tab_quest_pending">Chờ duyệt</string>
+    <string name="tab_quest_completed">Hoàn thành</string>
+    <string name="tab_quest_expired">Hết hạn</string>
+    <string name="leaderboard_title">Bảng xếp hạng điểm thưởng</string>
+    <string name="leaderboard_toggle">Hiện bảng xếp hạng</string>
+    <string name="my_total_points">Tổng điểm thưởng:</string>
+
+    <!-- Smart Match (Màn 15) -->
+    <string name="tab_suggested_matches">Gợi ý phù hợp</string>
+    <string name="tab_received_invitations">Lời mời kết nối</string>
+    <string name="match_score_label">Độ phù hợp: %1$d%%</string>
+    <string name="match_reason_label">Lý do: %1$s</string>
+    <string name="btn_send_invitation">Gửi lời mời kết nối</string>
+    <string name="invitation_sent">Đã gửi lời mời</string>
+    <string name="msg_invitation_sent">Đã gửi lời mời kết nối tới %1$s!</string>
+    <string name="msg_invitation_accepted">Đã chấp nhận kết nối với %1$s!</string>
+    <string name="msg_invitation_declined">Đã từ chối lời mời kết nối.</string>
+
+    <!-- AI Assistant (Màn 16) -->
+    <string name="assistant_welcome">Xin chào! Tôi là Trợ lý sự kiện thông minh. Bạn có thể hỏi tôi về lịch trình, diễn giả, địa điểm ăn uống, Wi-Fi hoặc cách tham gia nhiệm vụ.</string>
+    <string name="hint_ask_assistant">Nhập câu hỏi của bạn tại đây...</string>
+    <string name="assistant_chip_wifi">Mật khẩu Wi-Fi là gì?</string>
+    <string name="assistant_chip_schedule">Lịch trình phiên AI hôm nay?</string>
+    <string name="assistant_chip_food">Khu ẩm thực nằm ở đâu?</string>
+    <string name="assistant_chip_checkin">Cách lấy vé và check-in?</string>
+
+    <!-- Live Map (Màn 17) -->
+    <string name="map_legend_stage">Sân khấu chính</string>
+    <string name="map_legend_rooms">Phòng hội thảo</string>
+    <string name="map_legend_booths">Khu triển lãm</string>
+    <string name="map_legend_food">Ẩm thực &amp; Nghỉ ngơi</string>
+    <string name="map_legend_wc">Khu vệ sinh</string>
+    <string name="map_legend_help">Bàn hỗ trợ</string>
+    <string name="map_legend_exit">Lối thoát hiểm</string>
+    <string name="map_active_session">Hoạt động đang diễn ra:</string>
+
+    <!-- Event Memory (Màn 18) -->
+    <string name="memory_title">Nhật ký hành trình sự kiện</string>
+    <string name="memory_checkin_time">Thời gian check-in: %1$s</string>
+    <string name="memory_completed_quests">Nhiệm vụ hoàn thành: %1$d</string>
+    <string name="memory_badges_earned">Huy hiệu đạt được: %1$d</string>
+    <string name="memory_certificate_title">Chứng nhận tham dự số</string>
+    <string name="memory_certificate_desc">Chứng nhận bởi Nhóm 29 Smart Event Hub</string>
+    <string name="memory_photo_grid">Khoảnh khắc đáng nhớ</string>
+    <string name="memory_companions">Bạn bè đã kết nối (%1$d)</string>
+    <string name="memory_share_privacy">Công khai nhật ký kỷ niệm</string>
+
+    <!-- Profile & Settings (Màn 19) -->
+    <string name="profile_name">Nguyễn Văn An</string>
+    <string name="profile_email">an.nguyen@example.com</string>
+    <string name="profile_title">Kỹ sư phần mềm Di động</string>
+    <string name="profile_interests">Sở thích &amp; Quan tâm</string>
+    <string name="btn_edit_profile">Cập nhật hồ sơ</string>
+    <string name="profile_saved_success">Đã lưu thông tin hồ sơ!</string>
+
+    <!-- Notifications (Màn 20) -->
+    <string name="notif_mark_all_read">Đánh dấu tất cả đã đọc</string>
+    <string name="notif_unread_badge">Chưa đọc</string>
+
+    <!-- Journey Setup & Step (Màn 21, 23) -->
+    <string name="journey_goal_learn">Học hỏi &amp; Nâng cao kiến thức</string>
+    <string name="journey_goal_networking">Mở rộng quan hệ (Networking)</string>
+    <string name="journey_goal_career">Tìm kiếm việc làm &amp; Cơ hội</string>
+    <string name="journey_goal_product">Khám phá sản phẩm &amp; Công nghệ</string>
+    <string name="journey_goal_entertainment">Giải trí &amp; Trải nghiệm</string>
+    <string name="journey_btn_create">Tạo lịch trình cá nhân hóa</string>
+    <string name="journey_step_mandatory">Bắt buộc</string>
+    <string name="journey_step_optional">Tùy chọn</string>
+    <string name="journey_step_checkin_success">Check-in phiên thành công!</string>
+    <string name="journey_step_completed_success">Hoàn thành bước hành trình!</string>
+    <string name="dialog_skip_step_title">Bỏ qua bước hành trình?</string>
+    <string name="dialog_skip_step_desc">Vui lòng nhập lý do bạn muốn bỏ qua bước này:</string>
+    <string name="hint_skip_reason">Ví dụ: Bận việc đột xuất, đổi sở thích...</string>
+
+    <!-- Secret Mission (Màn 24, 25, 26) -->
+    <string name="mission_masked_title">Nhiệm vụ bí mật mới</string>
+    <string name="mission_masked_desc">Mở khóa gợi ý để khám phá nội dung nhiệm vụ này!</string>
+    <string name="mission_hint_level_1">Gợi ý Cấp 1</string>
+    <string name="mission_hint_level_2">Gợi ý Cấp 2</string>
+    <string name="mission_hint_level_3">Gợi ý Cấp 3 (Vị trí chính xác)</string>
+    <string name="mission_evidence_hint">Nhập mã bí mật hoặc ghi chú bằng chứng...</string>
+    <string name="dialog_reject_mission_title">Từ chối bằng chứng nhiệm vụ</string>
+    <string name="dialog_reject_mission_desc">Vui lòng nhập lý do từ chối để người tham gia điều chỉnh:</string>
+    <string name="hint_rejection_reason">Ví dụ: Ảnh mờ, mã bí mật không chính xác...</string>
+
+    <!-- Time Capsule (Màn 27, 28, 29) -->
+    <string name="capsule_type_personal">Cá nhân (Gửi chính mình)</string>
+    <string name="capsule_type_friend">Bạn bè (Gửi bạn đồng hành)</string>
+    <string name="capsule_type_community">Cộng đồng (Gửi sự kiện tương lai)</string>
+    <string name="hint_capsule_title">Tiêu đề Hộp thời gian</string>
+    <string name="hint_capsule_message">Nội dung bức thư gửi vào tương lai...</string>
+    <string name="hint_capsule_recipient">Tên hoặc Email người nhận</string>
+    <string name="capsule_unlock_date_hint">Thời điểm mở khóa (phải sau hiện tại)</string>
+    <string name="capsule_ai_disclosure">AI Preview: Trợ lý AI sẽ tóm tắt cảm xúc thông điệp khi mở khóa.</string>
+    <string name="capsule_status_locked">Đang khóa</string>
+    <string name="capsule_status_ready">Sẵn sàng mở</string>
+    <string name="capsule_status_opened">Đã mở</string>
+    <string name="capsule_btn_open_now">Mở khóa hộp thời gian ngay</string>
+
+    <!-- Waitlist (Màn 30, 31, 32) -->
+    <string name="waitlist_joined_title">Bạn đang trong danh sách chờ!</string>
+    <string name="waitlist_joined_time">Thời gian gia nhập: %1$s</string>
+    <string name="seat_offer_received_title">Có chỗ ngồi mới dành cho bạn!</string>
+    <string name="seat_offer_received_desc">Một người tham gia đã hủy vé. Theo thứ tự hàng đợi FIFO, bạn nhận được quyền đăng ký chiếc vé này.</string>
+    <string name="btn_accept_seat">Xác nhận nhận vé ngay</string>
+    <string name="btn_decline_seat">Nhường cho người tiếp theo</string>
+    <string name="org_waitlist_title">Quản lý danh sách chờ</string>
+    <string name="org_waitlist_confirmed">Đã xác nhận: %1$d</string>
+    <string name="org_waitlist_held">Đang giữ chỗ (Offer): %1$d</string>
+    <string name="org_waitlist_waiting">Đang đợi (Waiting): %1$d</string>
+    <string name="org_waitlist_fifo_rule">Chính sách ưu tiên: FIFO nghiêm ngặt (First-In, First-Out)</string>
+</resources>

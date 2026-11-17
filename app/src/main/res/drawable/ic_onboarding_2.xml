@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillColor="#E0F2F1"
+        android:pathData="M60,10 A50,50 0 1,1 59.9,10 Z" />
+    <!-- QR Scanner & Network (During Event) -->
+    <path
+        android:fillColor="#00897B"
+        android:pathData="M35,35 h15 v5 h-10 v10 h-5 z M70,35 h15 v15 h-5 v-10 h-10 z M35,70 h5 v10 h10 v5 h-15 z M80,70 h5 v15 h-15 v-5 h10 z" />
+    <path
+        android:fillColor="#004D40"
+        android:pathData="M48,48 h24 v24 h-24 z" />
+</vector>

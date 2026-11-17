@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.EventApp.CardView.Outlined"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/spacing_12">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Banner Placeholder -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_card_placeholder" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_12">
+
+            <TextView
+                android:id="@+id/tvSmallCardStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_status_info"
+                android:text="Đang diễn ra"
+                android:textAppearance="@style/TextAppearance.EventApp.Caption"
+                android:textColor="@color/status_info"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSmallCardTitle"
+                style="@style/TextAppearance.EventApp.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_6"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Tên sự kiện phù hợp" />
+
+            <TextView
+                android:id="@+id/tvSmallCardTime"
+                style="@style/TextAppearance.EventApp.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_6"
+                android:drawableStart="@drawable/ic_clock"
+                android:drawablePadding="@dimen/spacing_4"
+                android:drawableTint="@color/on_surface_hint"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Hôm nay 14:00" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

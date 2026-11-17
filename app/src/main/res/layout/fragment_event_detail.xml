@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/surface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/title_event_detail"
+        app:titleTextAppearance="@style/TextAppearance.EventApp.Title" />
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/layoutBottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/spacing_32">
+
+            <!-- Banner Header -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/bg_gradient_header"
+                android:padding="@dimen/spacing_16">
+
+                <TextView
+                    android:id="@+id/tvDetailCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_chip_status_neutral"
+                    android:text="Công nghệ"
+                    android:textAppearance="@style/TextAppearance.EventApp.Caption"
+                    android:textColor="@color/on_surface"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDetailStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_8"
+                    android:background="@drawable/bg_chip_status_success"
+                    android:text="Sắp diễn ra"
+                    android:textAppearance="@style/TextAppearance.EventApp.Caption"
+                    android:textColor="@color/status_success"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/tvDetailCategory"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDetailTitle"
+                    style="@style/TextAppearance.EventApp.HeadlineMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_12"
+                    android:text="Tên sự kiện chi tiết"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailCategory" />
+
+                <TextView
+                    android:id="@+id/tvDetailOrganizer"
+                    style="@style/TextAppearance.EventApp.Body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_4"
+                    android:text="Tổ chức bởi: Hiệp hội Phần mềm"
+                    android:textColor="#E0E3EC"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailTitle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Key Info Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_16">
+
+                <!-- Time -->
+                <TextView
+                    android:id="@+id/tvDetailTime"
+                    style="@style/TextAppearance.EventApp.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_clock"
+                    android:drawablePadding="@dimen/spacing_8"
+                    android:drawableTint="@color/primary"
+                    android:text="Thời gian: 20/11/2026 08:30 - 17:00" />
+
+                <!-- Location -->
+                <TextView
+                    android:id="@+id/tvDetailLocation"
+                    style="@style/TextAppearance.EventApp.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_8"
+                    android:drawableStart="@drawable/ic_location"
+                    android:drawablePadding="@dimen/spacing_8"
+                    android:drawableTint="@color/primary"
+                    android:text="Địa điểm: Trung tâm Hội nghị Ariyana, Đà Nẵng" />
+
+                <!-- Capacity & Progress Bar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_12"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDetailCapacityLabel"
+                        style="@style/TextAppearance.EventApp.Caption"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Số lượng đăng ký: 92 / 150 chỗ"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDetailCapacityPercent"
+                        style="@style/TextAppearance.EventApp.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="61%"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBarCapacity"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="@dimen/spacing_4"
+                    android:max="100"
+                    android:progress="61"
+                    android:progressTint="@color/primary" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/surface_variant" />
+
+            <!-- Event Utilities (Tiện ích sự kiện) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_16">
+
+                <TextView
+                    style="@style/TextAppearance.EventApp.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiện ích sự kiện thông minh" />
+
+                <TextView
+                    style="@style/TextAppearance.EventApp.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_2"
+                    android:text="Truy cập các tính năng cá nhân hóa và tương tác trực tiếp" />
+
+                <!-- Grid 4 rows x 2 cols of utilities -->
+                <LinearLayout
+                    android:id="@+id/layoutUtilitiesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_12"
+                    android:orientation="vertical">
+
+                    <!-- Row 1: Journey & Quest -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/utilJourney"
+                            layout="@layout/item_event_utility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/utilQuest"
+                            layout="@layout/item_event_utility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <!-- Row 2: Secret Mission & AI -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_4"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/utilSecretMission"
+                            layout="@layout/item_event_utility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/utilAi"
+                            layout="@layout/item_event_utility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <!-- Row 3: Live Map & Memory -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_4"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/utilMap"
+                            layout="@layout/item_event_utility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/utilMemory"
+                            layout="@layout/item_event_utility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <!-- Row 4: Capsule & Waitlist -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_4"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/utilCapsule"
+                            layout="@layout/item_event_utility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/utilWaitlist"
+                            layout="@layout/item_event_utility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/surface_variant" />
+
+            <!-- Description & Speakers -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_16">
+
+                <TextView
+                    style="@style/TextAppearance.EventApp.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giới thiệu sự kiện" />
+
+                <TextView
+                    android:id="@+id/tvDetailDescription"
+                    style="@style/TextAppearance.EventApp.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_8"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Mô tả sự kiện chi tiết..." />
+
+                <TextView
+                    style="@style/TextAppearance.EventApp.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_16"
+                    android:text="Diễn giả khách mời" />
+
+                <TextView
+                    android:id="@+id/tvDetailSpeakers"
+                    style="@style/TextAppearance.EventApp.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_6"
+                    android:text="TS. Lê Anh Tuấn, Bà Hoàng Mai Linh" />
+
+                <TextView
+                    style="@style/TextAppearance.EventApp.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_16"
+                    android:text="Điều kiện tham dự" />
+
+                <TextView
+                    android:id="@+id/tvDetailRequirements"
+                    style="@style/TextAppearance.EventApp.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_6"
+                    android:text="Mang theo vé QR check-in tại cổng..." />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/surface_variant" />
+
+            <!-- Schedule / Sessions List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_16">
+
+                <TextView
+                    style="@style/TextAppearance.EventApp.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lịch trình chi tiết (Sessions)" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDetailSessions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_12"
+                    android:nestedScrollingEnabled="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Sticky Action Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutBottomBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        android:elevation="@dimen/elevation_high"
+        android:padding="@dimen/spacing_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Case 1: Register Button (When not registered & spots available) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegisterEvent"
+            style="@style/Widget.EventApp.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký tham gia ngay"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Case 2: Registered Container (View Ticket + Cancel Button) -->
+        <LinearLayout
+            android:id="@+id/layoutRegisteredActions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelRegistration"
+                style="@style/Widget.EventApp.Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_8"
+                android:layout_weight="1"
+                android:strokeColor="@color/status_error"
+                android:text="Hủy đăng ký"
+                android:textColor="@color/status_error" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewTicket"
+                style="@style/Widget.EventApp.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_8"
+                android:layout_weight="1"
+                android:text="Xem vé QR"
+                app:icon="@drawable/ic_nav_scan" />
+
+        </LinearLayout>
+
+        <!-- Case 3: Waitlist Container (Disabled Closed Button + Join Waitlist Button) -->
+        <LinearLayout
+            android:id="@+id/layoutWaitlistActions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvClosedReason"
+                style="@style/TextAppearance.EventApp.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sự kiện đã hết chỗ đăng ký chính thức."
+                android:textColor="@color/status_error" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnJoinWaitlistAction"
+                style="@style/Widget.EventApp.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_8"
+                android:backgroundTint="@color/status_warning"
+                android:text="Tham gia danh sách chờ (Waitlist)" />
+
+        </LinearLayout>
+
+        <!-- Case 4: Cancelled / Closed Disabled Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDisabledEvent"
+            style="@style/Widget.EventApp.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/disabled_bg"
+            android:enabled="false"
+            android:text="Sự kiện đã bị hủy"
+            android:textColor="@color/disabled_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Loading & Error Overlays -->
+    <include
+        android:id="@+id/includeLoading"
+        layout="@layout/layout_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <include
+        android:id="@+id/includeError"
+        layout="@layout/layout_error"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.EventApp.CardView.Outlined"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_12">
+
+        <TextView
+            android:id="@+id/tvSessionTime"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_status_neutral"
+            android:text="08:30 - 10:00"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSessionTag"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_8"
+            android:background="@drawable/bg_chip_status_warning"
+            android:text="Bắt buộc"
+            android:textColor="@color/status_warning"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvSessionTime"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSessionTitle"
+            style="@style/TextAppearance.EventApp.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:text="Tên phiên hội thảo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSessionTime" />
+
+        <TextView
+            android:id="@+id/tvSessionSpeaker"
+            style="@style/TextAppearance.EventApp.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="@dimen/spacing_4"
+            android:drawableTint="@color/on_surface_hint"
+            android:text="Diễn giả: TS. Lê Anh Tuấn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSessionTitle" />
+
+        <TextView
+            android:id="@+id/tvSessionRoom"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_2"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="@dimen/spacing_4"
+            android:drawableTint="@color/on_surface_hint"
+            android:text="Phòng: Hội trường Grand Ballroom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSessionSpeaker" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

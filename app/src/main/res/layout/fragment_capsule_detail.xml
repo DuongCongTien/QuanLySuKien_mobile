@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_surface">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="@string/title_capsule_detail"
+            app:titleCentered="true"
+            app:titleTextAppearance="?attr/textAppearanceTitleMedium" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Locked View (When unlockAt has not arrived) -->
+        <LinearLayout
+            android:id="@+id/layoutLockedView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:contentDescription="Locked"
+                android:src="@drawable/ic_lock"
+                app:tint="@color/color_primary" />
+
+            <TextView
+                android:id="@+id/tvLockedTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?attr/textAppearanceTitleLarge"
+                android:textColor="@color/color_on_surface"
+                android:textStyle="bold"
+                tools:text="Mục tiêu trở thành Senior Mobile AI Engineer" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/capsule_locked_notice"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="@color/color_on_surface_variant" />
+
+            <TextView
+                android:id="@+id/tvLockedCountdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textAppearance="?attr/textAppearanceHeadlineMedium"
+                android:textColor="@color/color_primary"
+                android:textStyle="bold"
+                tools:text="02 ngày 14:25:30" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_bottom_sheet"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/error_capsule_locked"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="@color/color_secondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTryOpenNow"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:minHeight="48dp"
+                android:text="Thử mở khóa ngay" />
+        </LinearLayout>
+
+        <!-- Unlocked View (When opened or available to open) -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/layoutUnlockedView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_medium">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/corner_radius_medium"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@color/color_outline"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_large">
+
+                        <TextView
+                            android:id="@+id/tvUnlockedTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceTitleLarge"
+                            android:textColor="@color/color_on_surface"
+                            android:textStyle="bold"
+                            tools:text="Dự đoán xu hướng công nghệ 2027" />
+
+                        <TextView
+                            android:id="@+id/tvSenderRecipient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceBodySmall"
+                            android:textColor="@color/color_on_surface_variant"
+                            tools:text="Từ: Nguyễn Văn A • Gửi tới: Cộng đồng Tech Summit" />
+
+                        <TextView
+                            android:id="@+id/tvDatesInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textAppearance="?attr/textAppearanceLabelSmall"
+                            android:textColor="@color/color_secondary"
+                            tools:text="Niêm phong: 05/11/2026 • Đã mở: 12/11/2026 09:00" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="12dp"
+                            android:background="@color/color_outline" />
+
+                        <TextView
+                            android:id="@+id/tvUnlockedMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="4dp"
+                            android:textAppearance="?attr/textAppearanceBodyLarge"
+                            android:textColor="@color/color_on_surface"
+                            tools:text="Cảm ơn Ban tổ chức và các anh chị diễn giả đã chia sẻ những kinh nghiệm phỏng vấn vô giá..." />
+
+                        <!-- Photo Attachment -->
+                        <ImageView
+                            android:id="@+id/ivAttachment"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/bg_card_placeholder"
+                            android:contentDescription="Attachment"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_onboarding_3" />
+
+                        <!-- Simulated File Error Card -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardFileError"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="@color/color_error_container">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Lỗi tải tệp đính kèm mã hóa (Mô phỏng)"
+                                    android:textAppearance="?attr/textAppearanceBodySmall"
+                                    android:textColor="@color/color_on_error_container" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnRetryFile"
+                                    style="@style/Widget.Material3.Button.TextButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/btn_retry"
+                                    android:textColor="@color/color_on_error_container"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Actions -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnReply"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:text="Phản hồi" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnShare"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:text="@string/btn_share" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

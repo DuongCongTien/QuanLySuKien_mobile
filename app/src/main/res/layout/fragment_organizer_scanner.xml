@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <!-- Top Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="#1A1C1E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/title_org_scanner"
+        app:titleTextAppearance="@style/TextAppearance.EventApp.Title"
+        app:titleTextColor="@color/white" />
+
+    <!-- Simulated Camera Viewport -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCameraViewport"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#212121"
+        app:layout_constraintBottom_toTopOf="@+id/layoutSimulationControls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!-- Scanner Frame -->
+        <ImageView
+            android:id="@+id/ivScannerFrame"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:contentDescription="Khung quét camera"
+            android:src="@drawable/bg_scanner_frame"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_12"
+            android:background="#80000000"
+            android:paddingStart="@dimen/spacing_12"
+            android:paddingTop="@dimen/spacing_6"
+            android:paddingEnd="@dimen/spacing_12"
+            android:paddingBottom="@dimen/spacing_6"
+            android:text="Căn chỉnh mã QR vé của người tham dự vào giữa khung"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivScannerFrame" />
+
+        <TextView
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_12"
+            android:text="// MOCK: Camera quét mã QR giả lập"
+            android:textColor="#B0BEC5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Simulation Controls Panel -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layoutSimulationControls"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:background="@color/surface"
+        android:elevation="@dimen/elevation_high"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_16">
+
+            <TextView
+                style="@style/TextAppearance.EventApp.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MÔ PHỎNG CÁC KỊCH BẢN QUÉT CHECK-IN:"
+                android:textColor="@color/primary"
+                android:textStyle="bold" />
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_8"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSimulateSuccess"
+                    style="@style/Widget.EventApp.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_4"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/status_success"
+                    android:text="1. Thành công"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSimulateAlreadyChecked"
+                    style="@style/Widget.EventApp.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_4"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/status_warning"
+                    android:text="2. Đã check-in"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_6"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSimulateWrongEvent"
+                    style="@style/Widget.EventApp.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_4"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/status_error"
+                    android:text="3. Sai sự kiện"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSimulateCancelled"
+                    style="@style/Widget.EventApp.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_4"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/status_error"
+                    android:text="4. Đã hủy vé"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- Row 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_6"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSimulateOutOfTime"
+                    style="@style/Widget.EventApp.Button.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_4"
+                    android:layout_weight="1"
+                    android:text="5. Ngoài giờ"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSimulateNoPermission"
+                    style="@style/Widget.EventApp.Button.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_4"
+                    android:layout_marginEnd="@dimen/spacing_4"
+                    android:layout_weight="1"
+                    android:text="6. Không quyền"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSimulateNetworkError"
+                    style="@style/Widget.EventApp.Button.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_4"
+                    android:layout_weight="1"
+                    android:text="7. Mất mạng"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Permission Denied Overlay (if Attendee visits) -->
+    <include
+        android:id="@+id/includePermissionDenied"
+        layout="@layout/layout_error"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand / Primary (Indigo Theme) -->
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="primary_light">#E8EAF6</color>
+    <color name="primary_variant">#5C6BC0</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Secondary / Accent -->
+    <color name="secondary">#00897B</color>
+    <color name="secondary_light">#E0F2F1</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="accent_gold">#FF8F00</color>
+    <color name="accent_gold_light">#FFF8E1</color>
+
+    <!-- Background and Surface -->
+    <color name="background">#F8F9FE</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F1F3F9</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="on_background">#1A1C1E</color>
+    <color name="on_surface">#1A1C1E</color>
+    <color name="on_surface_variant">#525866</color>
+    <color name="on_surface_hint">#8C91A0</color>
+    <color name="divider">#E2E6EE</color>
+    <color name="border_stroke">#DDE1EA</color>
+
+    <!-- Status Colors -->
+    <!-- Success (Green) -->
+    <color name="status_success">#2E7D32</color>
+    <color name="status_success_bg">#E8F5E9</color>
+    <color name="status_success_stroke">#A5D6A7</color>
+
+    <!-- Warning (Orange/Amber) -->
+    <color name="status_warning">#EF6C00</color>
+    <color name="status_warning_bg">#FFF3E0</color>
+    <color name="status_warning_stroke">#FFCC80</color>
+
+    <!-- Error / Cancelled (Red) -->
+    <color name="status_error">#D32F2F</color>
+    <color name="status_error_bg">#FFEBEE</color>
+    <color name="status_error_stroke">#EF9A9A</color>
+
+    <!-- Info / Ongoing (Cyan/Blue) -->
+    <color name="status_info">#0288D1</color>
+    <color name="status_info_bg">#E1F5FE</color>
+    <color name="status_info_stroke">#81D4FA</color>
+
+    <!-- Locked / Disabled / Neutral (Gray) -->
+    <color name="status_neutral">#616161</color>
+    <color name="status_neutral_bg">#EEEEEE</color>
+    <color name="status_locked">#757575</color>
+    <color name="status_locked_bg">#E0E0E0</color>
+    <color name="disabled_text">#9E9E9E</color>
+    <color name="disabled_bg">#E0E0E0</color>
+
+    <!-- Transparent & Overlay -->
+    <color name="transparent">#00000000</color>
+    <color name="scrim_black_40">#66000000</color>
+    <color name="scrim_black_60">#99000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Aliases for Material 3 standard tokens -->
+    <color name="color_primary">@color/primary</color>
+    <color name="color_on_primary">@color/on_primary</color>
+    <color name="color_secondary">@color/secondary</color>
+    <color name="color_on_secondary">@color/on_secondary</color>
+    <color name="color_secondary_container">@color/secondary_light</color>
+    <color name="color_on_secondary_container">@color/secondary</color>
+    <color name="color_background">@color/background</color>
+    <color name="color_surface">@color/surface</color>
+    <color name="color_surface_variant">@color/surface_variant</color>
+    <color name="color_on_surface">@color/on_surface</color>
+    <color name="color_on_surface_variant">@color/on_surface_variant</color>
+    <color name="color_outline">@color/border_stroke</color>
+    <color name="color_success_container">@color/status_success_bg</color>
+    <color name="color_on_success_container">@color/status_success</color>
+    <color name="color_warning_container">@color/status_warning_bg</color>
+    <color name="color_on_warning_container">@color/status_warning</color>
+    <color name="color_error_container">@color/status_error_bg</color>
+    <color name="color_on_error_container">@color/status_error</color>
+</resources>
