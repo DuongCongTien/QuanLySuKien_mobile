@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.EventApp.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_12">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_16">
+
+        <!-- CheckIn Status Chip -->
+        <TextView
+            android:id="@+id/tvMyEventStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_status_info"
+            android:text="Chưa check-in"
+            android:textAppearance="@style/TextAppearance.EventApp.Caption"
+            android:textColor="@color/status_info"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Ticket Code -->
+        <TextView
+            android:id="@+id/tvMyEventTicketCode"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã vé: SEH-2026-TECH999"
+            android:textColor="@color/on_surface_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Event Title -->
+        <TextView
+            android:id="@+id/tvMyEventTitle"
+            style="@style/TextAppearance.EventApp.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:text="Tech Summit Danang 2026"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMyEventStatus" />
+
+        <!-- Time & Location -->
+        <TextView
+            android:id="@+id/tvMyEventTime"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="@dimen/spacing_6"
+            android:drawableTint="@color/on_surface_hint"
+            android:text="20/11/2026 08:30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMyEventTitle" />
+
+        <TextView
+            android:id="@+id/tvMyEventLocation"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="@dimen/spacing_6"
+            android:drawableTint="@color/on_surface_hint"
+            android:text="Trung tâm Hội nghị Ariyana, Đà Nẵng"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMyEventTime" />
+
+        <!-- Action Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewTicketAction"
+            style="@style/Widget.EventApp.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_12"
+            android:text="Xem vé QR"
+            app:icon="@drawable/ic_nav_scan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMyEventLocation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M60,10 A50,50 0 1,1 59.9,10 Z" />
+    <!-- Memory & Capsule (After Event) -->
+    <path
+        android:fillColor="#FF8F00"
+        android:pathData="M45,35 h30 c6,0 10,4 10,10 v30 c0,6 -4,10 -10,10 h-30 c-6,0 -10,-4 -10,-10 v-30 c0,-6 4,-10 10,-10 z M60,45 a15,15 0 1,0 0.1,0 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M55,55 h10 v10 h-10 z" />
+</vector>

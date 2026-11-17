@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.EventApp.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_12">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_16">
+
+        <!-- Category & Status Chips -->
+        <TextView
+            android:id="@+id/tvCardCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_status_neutral"
+            android:text="Công nghệ"
+            android:textAppearance="@style/TextAppearance.EventApp.Caption"
+            android:textColor="@color/on_surface_variant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCardStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_8"
+            android:background="@drawable/bg_chip_status_success"
+            android:text="Sắp diễn ra"
+            android:textAppearance="@style/TextAppearance.EventApp.Caption"
+            android:textColor="@color/status_success"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvCardCategory"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Event Title -->
+        <TextView
+            android:id="@+id/tvCardTitle"
+            style="@style/TextAppearance.EventApp.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Tên sự kiện mẫu đầy đủ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCardCategory" />
+
+        <!-- Event Description snippet -->
+        <TextView
+            android:id="@+id/tvCardDesc"
+            style="@style/TextAppearance.EventApp.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Mô tả sự kiện ngắn gọn giúp người dùng nắm bắt thông tin quan trọng..."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCardTitle" />
+
+        <!-- Time & Location -->
+        <TextView
+            android:id="@+id/tvCardTime"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="@dimen/spacing_6"
+            android:drawableTint="@color/on_surface_hint"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="20/11/2026 08:30 - 17:00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCardDesc" />
+
+        <TextView
+            android:id="@+id/tvCardLocation"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="@dimen/spacing_6"
+            android:drawableTint="@color/on_surface_hint"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Trung tâm Hội nghị Ariyana, Đà Nẵng"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCardTime" />
+
+        <!-- Capacity / Spots left indicator -->
+        <TextView
+            android:id="@+id/tvCardCapacity"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:text="Còn 58 chỗ trống / 150"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCardLocation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

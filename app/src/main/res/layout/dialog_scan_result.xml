@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_24">
+
+    <!-- Status Icon -->
+    <ImageView
+        android:id="@+id/ivScanResultIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="Kết quả quét"
+        android:src="@drawable/ic_check"
+        app:tint="@color/status_success" />
+
+    <!-- Result Title -->
+    <TextView
+        android:id="@+id/tvScanResultTitle"
+        style="@style/TextAppearance.EventApp.HeadlineSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_12"
+        android:text="Check-in thành công!"
+        android:textColor="@color/status_success" />
+
+    <!-- Result Description -->
+    <TextView
+        android:id="@+id/tvScanResultDesc"
+        style="@style/TextAppearance.EventApp.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:gravity="center"
+        android:text="Vé hợp lệ. Người tham dự đã được xác thực vào sự kiện." />
+
+    <!-- Attendee Details Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAttendeeDetails"
+        style="@style/Widget.EventApp.CardView.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_12">
+
+            <TextView
+                android:id="@+id/tvAttendeeName"
+                style="@style/TextAppearance.EventApp.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Họ tên: Nguyễn Văn A" />
+
+            <TextView
+                android:id="@+id/tvTicketCode"
+                style="@style/TextAppearance.EventApp.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_4"
+                android:text="Mã vé: SEH-2026-AI888" />
+
+            <TextView
+                android:id="@+id/tvCheckInTime"
+                style="@style/TextAppearance.EventApp.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_4"
+                android:text="Thời gian: 20/11/2026 08:35"
+                android:textColor="@color/on_surface_hint" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Close Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDismissScanResult"
+        style="@style/Widget.EventApp.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_20"
+        android:text="Tiếp tục quét vé khác" />
+
+</LinearLayout>

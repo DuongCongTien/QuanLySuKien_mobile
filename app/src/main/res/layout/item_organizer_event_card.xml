@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.EventApp.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_12">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_16">
+
+        <!-- Status chip -->
+        <TextView
+            android:id="@+id/tvOrgEventStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_status_success"
+            android:text="Sắp diễn ra"
+            android:textAppearance="@style/TextAppearance.EventApp.Caption"
+            android:textColor="@color/status_success"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Registered Count -->
+        <TextView
+            android:id="@+id/tvOrgEventCapacity"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="92 / 150 người"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvOrgEventTitle"
+            style="@style/TextAppearance.EventApp.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:text="Tech Summit Danang 2026"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrgEventStatus" />
+
+        <!-- Time & Location -->
+        <TextView
+            android:id="@+id/tvOrgEventTime"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="@dimen/spacing_6"
+            android:drawableTint="@color/on_surface_hint"
+            android:text="20/11/2026 08:30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrgEventTitle" />
+
+        <TextView
+            android:id="@+id/tvOrgEventLocation"
+            style="@style/TextAppearance.EventApp.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="@dimen/spacing_6"
+            android:drawableTint="@color/on_surface_hint"
+            android:text="Trung tâm Hội nghị Ariyana, Đà Nẵng"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrgEventTime" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_12"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrgEventLocation">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewAttendees"
+                style="@style/Widget.EventApp.Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_4"
+                android:layout_weight="1"
+                android:text="DS người đăng ký"
+                android:textSize="12sp"
+                app:icon="@drawable/ic_person" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditEvent"
+                style="@style/Widget.EventApp.Button.Tonal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4"
+                android:layout_weight="1"
+                android:text="Sửa sự kiện"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
